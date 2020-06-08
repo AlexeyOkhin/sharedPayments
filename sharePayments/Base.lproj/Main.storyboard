@@ -13,7 +13,6 @@
         <!--Table View Controller-->
         <scene sceneID="Pju-lv-blq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jMu-rL-PKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="hil-R6-eAA" userLabel="Table View Controller" customClass="mainTableViewController" customModule="sharePayments" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8bx-bm-5gw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -47,13 +46,14 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jMu-rL-PKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1335" y="102"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Event View Controller-->
         <scene sceneID="Kdx-y3-RGe">
             <objects>
-                <viewController id="cKN-dP-Qbr" sceneMemberID="viewController">
+                <viewController id="cKN-dP-Qbr" customClass="addEventViewController" customModule="sharePayments" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ob4-0W-20w">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="2768" y="101"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Members Table View Controller-->
         <scene sceneID="qvM-c5-AMH">
             <objects>
-                <tableViewController id="ovu-4q-jlc" sceneMemberID="viewController">
+                <tableViewController id="ovu-4q-jlc" customClass="membersTableViewController" customModule="sharePayments" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gbq-au-jre">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

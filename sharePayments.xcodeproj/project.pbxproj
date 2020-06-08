@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A016203248EB97B00BDCB42 /* addEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A016202248EB97B00BDCB42 /* addEventViewController.swift */; };
+		8A016207248EBA0700BDCB42 /* membersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A016206248EBA0700BDCB42 /* membersTableViewController.swift */; };
+		8A016209248EBA4200BDCB42 /* addMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A016208248EBA4200BDCB42 /* addMemberViewController.swift */; };
 		8A1815AA248AABCB00C3091D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1815A9248AABCB00C3091D /* AppDelegate.swift */; };
 		8A1815AF248AABCB00C3091D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1815AD248AABCB00C3091D /* Main.storyboard */; };
 		8A1815B2248AABCB00C3091D /* sharePayments.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A1815B0248AABCB00C3091D /* sharePayments.xcdatamodeld */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A016202248EB97B00BDCB42 /* addEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addEventViewController.swift; sourceTree = "<group>"; };
+		8A016206248EBA0700BDCB42 /* membersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = membersTableViewController.swift; sourceTree = "<group>"; };
+		8A016208248EBA4200BDCB42 /* addMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addMemberViewController.swift; sourceTree = "<group>"; };
 		8A1815A6248AABCB00C3091D /* sharePayments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sharePayments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A1815A9248AABCB00C3091D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A1815AE248AABCB00C3091D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,11 +64,14 @@
 			children = (
 				8A1815A9248AABCB00C3091D /* AppDelegate.swift */,
 				8A1815BE248BE9B500C3091D /* mainTableViewController.swift */,
+				8A016206248EBA0700BDCB42 /* membersTableViewController.swift */,
+				8A016202248EB97B00BDCB42 /* addEventViewController.swift */,
+				8A016208248EBA4200BDCB42 /* addMemberViewController.swift */,
 				8A1815AD248AABCB00C3091D /* Main.storyboard */,
-				8A1815B3248AABCD00C3091D /* Assets.xcassets */,
 				8A1815B5248AABCD00C3091D /* LaunchScreen.storyboard */,
-				8A1815B8248AABCD00C3091D /* Info.plist */,
+				8A1815B3248AABCD00C3091D /* Assets.xcassets */,
 				8A1815B0248AABCB00C3091D /* sharePayments.xcdatamodeld */,
+				8A1815B8248AABCD00C3091D /* Info.plist */,
 			);
 			path = sharePayments;
 			sourceTree = "<group>";
@@ -139,6 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A1815B2248AABCB00C3091D /* sharePayments.xcdatamodeld in Sources */,
+				8A016207248EBA0700BDCB42 /* membersTableViewController.swift in Sources */,
+				8A016209248EBA4200BDCB42 /* addMemberViewController.swift in Sources */,
+				8A016203248EB97B00BDCB42 /* addEventViewController.swift in Sources */,
 				8A1815BF248BE9B500C3091D /* mainTableViewController.swift in Sources */,
 				8A1815AA248AABCB00C3091D /* AppDelegate.swift in Sources */,
 			);
