@@ -14,7 +14,8 @@ class mainTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Событие"
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
        
     }
     
