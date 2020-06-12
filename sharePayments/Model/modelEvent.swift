@@ -10,7 +10,7 @@ import Foundation
 
 struct Event {
     var name: String
-    var date: Date
+    var date: String
     
     
 }

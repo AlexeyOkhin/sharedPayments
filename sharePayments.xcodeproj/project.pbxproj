@@ -81,8 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				8A1815BE248BE9B500C3091D /* mainTableViewController.swift */,
-				8A016206248EBA0700BDCB42 /* membersTableViewController.swift */,
 				8A016202248EB97B00BDCB42 /* addEventViewController.swift */,
+				8A016206248EBA0700BDCB42 /* membersTableViewController.swift */,
 				8A016208248EBA4200BDCB42 /* addMemberViewController.swift */,
 			);
 			path = Controller;

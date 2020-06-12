@@ -90,6 +90,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameEventAction:" destination="cKN-dP-Qbr" eventType="editingChanged" id="Kdy-1k-GbI"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дата события" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UGY-DF-bK5">
                                 <rect key="frame" x="16" y="164" width="288" height="30"/>
@@ -110,15 +113,25 @@
                         <viewLayoutGuide key="safeArea" id="QUd-BV-vEl"/>
                     </view>
                     <navigationItem key="navigationItem" id="XsK-p0-L0O">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="UoG-j7-0B2"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ptY-Oj-hEN"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="UoG-j7-0B2">
+                            <connections>
+                                <segue destination="ygX-J0-G7d" kind="unwind" unwindAction="unwindSegueWithSegue:" id="Kjq-Ju-5Re"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="ptY-Oj-hEN">
+                            <connections>
+                                <segue destination="ygX-J0-G7d" kind="unwind" identifier="unwindSave" unwindAction="unwindSegueWithSegue:" id="kgJ-D7-Sqb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dateEventTextField" destination="UGY-DF-bK5" id="11J-hC-Q76"/>
                         <outlet property="nameEventTextField" destination="aG2-Mt-fqr" id="voM-I0-jrz"/>
+                        <outlet property="saveButton" destination="ptY-Oj-hEN" id="cFR-KM-6vj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXf-Vd-6NU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ygX-J0-G7d" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2768" y="101"/>
         </scene>
@@ -165,22 +178,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите Имя" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HJb-59-fqN">
-                                <rect key="frame" x="38" y="95" width="251" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите Имя" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HJb-59-fqN">
+                                <rect key="frame" x="16" y="94" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите сумму" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0H-Ly-c7R">
-                                <rect key="frame" x="73" y="164" width="183" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите сумму" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0H-Ly-c7R">
+                                <rect key="frame" x="16" y="154" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fTm-xf-FGV" firstAttribute="trailing" secondItem="A0H-Ly-c7R" secondAttribute="trailing" constant="16" id="KHa-cl-bRI"/>
+                            <constraint firstItem="HJb-59-fqN" firstAttribute="leading" secondItem="fTm-xf-FGV" secondAttribute="leading" constant="16" id="Swo-Vp-oXa"/>
+                            <constraint firstItem="fTm-xf-FGV" firstAttribute="trailing" secondItem="HJb-59-fqN" secondAttribute="trailing" constant="16" id="cPu-bO-yh4"/>
+                            <constraint firstItem="A0H-Ly-c7R" firstAttribute="leading" secondItem="fTm-xf-FGV" secondAttribute="leading" constant="16" id="d7R-j8-sFS"/>
+                            <constraint firstItem="A0H-Ly-c7R" firstAttribute="top" secondItem="HJb-59-fqN" secondAttribute="bottom" constant="30" id="gWp-je-NnR"/>
+                            <constraint firstItem="HJb-59-fqN" firstAttribute="top" secondItem="fTm-xf-FGV" secondAttribute="top" constant="30" id="ipg-4e-4bb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fTm-xf-FGV"/>
                     </view>
                     <navigationItem key="navigationItem" id="1nj-RS-Rye">

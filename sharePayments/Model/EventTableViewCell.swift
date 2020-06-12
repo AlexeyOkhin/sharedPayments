@@ -24,5 +24,10 @@ class EventTableViewCell: UITableViewCell {
             // Действие при нажатии на ячейку
         
     }
+    
+    func set(object: Event) {
+        self.nameEventLabel.text = object.name
+        self.dateEventLabel.text = object.date
+    }
 
 }
