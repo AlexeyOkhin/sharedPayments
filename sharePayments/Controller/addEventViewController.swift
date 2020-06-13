@@ -11,6 +11,7 @@ import UIKit
 class addEventViewController: UIViewController {
     
     var event = Event(name: "", date: "")
+    var indexPathRow: IndexPath?
     
     @IBOutlet weak var nameEventTextField: UITextField!
     @IBOutlet weak var dateEventTextField: UITextField!
@@ -20,7 +21,9 @@ class addEventViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Добавить событие"
+        //self.title = "Добавить событие"
+        nameEventTextField.text = event.name
+        dateEventTextField.text = event.date
         saveButton.isEnabled = false
         dateEventTextField.inputView = datePicker
         datePicker.datePickerMode = .date

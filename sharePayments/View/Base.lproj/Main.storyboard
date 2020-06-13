@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="1335" y="101.40845070422536"/>
         </scene>
-        <!--Add Event View Controller-->
+        <!--Добавить событие-->
         <scene sceneID="Kdx-y3-RGe">
             <objects>
-                <viewController id="cKN-dP-Qbr" customClass="addEventViewController" customModule="sharePayments" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addEventViewController" id="cKN-dP-Qbr" customClass="addEventViewController" customModule="sharePayments" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ob4-0W-20w">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +112,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QUd-BV-vEl"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XsK-p0-L0O">
+                    <navigationItem key="navigationItem" title="Добавить событие" id="XsK-p0-L0O">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="UoG-j7-0B2">
                             <connections>
                                 <segue destination="ygX-J0-G7d" kind="unwind" unwindAction="unwindSegueWithSegue:" id="Kjq-Ju-5Re"/>
