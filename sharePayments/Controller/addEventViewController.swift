@@ -20,6 +20,7 @@ class addEventViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Добавить событие"
         saveButton.isEnabled = false
         dateEventTextField.inputView = datePicker
         datePicker.datePickerMode = .date
