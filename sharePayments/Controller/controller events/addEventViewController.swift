@@ -10,7 +10,7 @@ import UIKit
 
 class addEventViewController: UIViewController {
     
-    var event = Event(name: "", date: "")
+    var event = Event(name: "", date: "", members: [])
     var indexPathRow: IndexPath?
     
     @IBOutlet weak var nameEventTextField: UITextField!
@@ -67,7 +67,7 @@ class addEventViewController: UIViewController {
         let event = nameEventTextField.text ?? ""
         let date = dateEventTextField.text ?? ""
         
-        self.event = Event(name: event, date: date)
+        self.event = Event(name: event, date: date, members: [])
     }
 
     

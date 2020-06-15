@@ -19,24 +19,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="62" id="Vvc-OD-UOC" customClass="EventTableViewCell" customModule="sharePayments" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="62"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="60" id="Vvc-OD-UOC" customClass="EventTableViewCell" customModule="sharePayments" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vvc-OD-UOC" id="qAY-Sh-L1f">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="61.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleAspectFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZuH-qZ-adR">
-                                            <rect key="frame" x="32" y="19" width="256" height="24"/>
+                                            <rect key="frame" x="32" y="19" width="256" height="22"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaJ-vS-1Fj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="204" height="24"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="204" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9B-Jn-R6X">
-                                                    <rect key="frame" x="214" y="0.0" width="42" height="24"/>
+                                                    <rect key="frame" x="214" y="0.0" width="42" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -135,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="2768" y="101"/>
         </scene>
-        <!--Members Table View Controller-->
+        <!--Участники-->
         <scene sceneID="qvM-c5-AMH">
             <objects>
                 <tableViewController id="ovu-4q-jlc" customClass="membersTableViewController" customModule="sharePayments" customModuleProvider="target" sceneMemberID="viewController">
@@ -144,13 +144,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="goz-Ir-P2t">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberCell" rowHeight="50" id="goz-Ir-P2t" customClass="MembersTableViewCell" customModule="sharePayments" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="goz-Ir-P2t" id="aAd-me-TPE">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qy0-Rw-QIw">
+                                            <rect key="frame" x="32" y="19" width="256" height="12"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1Q-qd-HAw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="204" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRz-Tf-grY">
+                                                    <rect key="frame" x="214" y="0.0" width="42" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Qy0-Rw-QIw" secondAttribute="trailing" constant="16" id="2mz-tX-5yN"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Qy0-Rw-QIw" secondAttribute="bottom" constant="8" id="5y5-dp-D45"/>
+                                        <constraint firstItem="Qy0-Rw-QIw" firstAttribute="top" secondItem="aAd-me-TPE" secondAttribute="topMargin" constant="8" id="NZv-gR-N9e"/>
+                                        <constraint firstItem="Qy0-Rw-QIw" firstAttribute="leading" secondItem="aAd-me-TPE" secondAttribute="leadingMargin" constant="16" id="dYR-Jl-NsE"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameMemberLabel" destination="A1Q-qd-HAw" id="Vyq-GQ-6be"/>
+                                    <outlet property="payMemberLabel" destination="xRz-Tf-grY" id="gUD-ej-K31"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -158,7 +187,12 @@
                             <outlet property="delegate" destination="ovu-4q-jlc" id="w0d-ZE-4HT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="kWQ-WD-oPN">
+                    <navigationItem key="navigationItem" title="Участники" id="kWQ-WD-oPN">
+                        <barButtonItem key="leftBarButtonItem" systemItem="undo" id="zWm-al-aDR">
+                            <connections>
+                                <segue destination="wYp-1j-gEi" kind="unwind" unwindAction="unwindSegueWithSegue:" id="qVk-LY-DNc"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3WV-Uh-bok">
                             <connections>
                                 <segue destination="50y-EI-f1I" kind="presentation" id="MoK-dE-8xs"/>
@@ -167,13 +201,14 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bji-hx-c98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wYp-1j-gEi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1335" y="897"/>
+            <point key="canvasLocation" x="1335" y="896.83098591549299"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Member View Controller-->
         <scene sceneID="WDk-wb-t1k">
             <objects>
-                <viewController id="Vf8-p5-nr1" sceneMemberID="viewController">
+                <viewController id="Vf8-p5-nr1" customClass="addMemberViewController" customModule="sharePayments" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QeH-dr-nYU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,12 +218,18 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameMemberAction:" destination="Vf8-p5-nr1" eventType="editingChanged" id="Ia6-fh-v6s"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите сумму" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0H-Ly-c7R">
                                 <rect key="frame" x="16" y="154" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameMemberAction:" destination="Vf8-p5-nr1" eventType="editingChanged" id="QKw-ne-Gse"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -203,10 +244,21 @@
                         <viewLayoutGuide key="safeArea" id="fTm-xf-FGV"/>
                     </view>
                     <navigationItem key="navigationItem" id="1nj-RS-Rye">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="HvD-u3-eTT"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Imm-t1-5Lg"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="HvD-u3-eTT">
+                            <connections>
+                                <segue destination="Ena-6t-SEd" kind="unwind" identifier="unwindDone" unwindAction="unwindSegueMemberWithSegue:" id="g8O-jK-Rk2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="HvD-u3-eTT" id="i7r-hg-EDe"/>
+                        <outlet property="nameMemberTextField" destination="HJb-59-fqN" id="nMb-Jj-jF5"/>
+                        <outlet property="payMemberTextField" destination="A0H-Ly-c7R" id="Sz5-zs-K5V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVI-Hp-bXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ena-6t-SEd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2767.5" y="896.83098591549299"/>
         </scene>

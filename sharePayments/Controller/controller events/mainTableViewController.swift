@@ -10,7 +10,7 @@ import UIKit
 
 class mainTableViewController: UITableViewController {
     
-    var eventsArray = [Event(name: "командировка Орск", date: "12.05.2020")]
+    var eventsArray = [Event]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

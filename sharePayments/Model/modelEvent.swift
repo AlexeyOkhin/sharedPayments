@@ -8,9 +8,18 @@
 
 import Foundation
 
+struct Member {
+    var name: String
+    var payment: Int
+}
+
+
+
 struct Event {
     var name: String
     var date: String
-    
-    
+    var members: [Member]
+
 }
+
+
