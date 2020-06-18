@@ -12,23 +12,27 @@ class membersTableViewController: UITableViewController {
     
     var membersArray = [Member]()
     
+    weak var delegate: TabeleViewMemberDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+       
         
     }
     
     @IBAction func unwindSegueMember(segue: UIStoryboardSegue){
         guard segue.identifier == "unwindDone" else { return }
         
+        
+        
         let sourceMemberVC = segue.source as! addMemberViewController
         
         
         let newIndexPath = IndexPath(row: membersArray.count, section: 0)
         membersArray.append(sourceMemberVC.member)
-       
-        
+        delegate?.updateArrayMembers(member: sourceMemberVC.member)
+        print(membersArray)
         self.tableView.insertRows(at: [newIndexPath], with: .fade)
         
     }
@@ -63,11 +67,11 @@ class membersTableViewController: UITableViewController {
             self.membersArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
-        
-        
-        
+     
         return [deleteAction]
     }
+    
+    
     
     
 }

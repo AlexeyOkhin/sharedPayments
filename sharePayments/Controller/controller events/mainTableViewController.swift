@@ -8,13 +8,18 @@
 
 import UIKit
 
-class mainTableViewController: UITableViewController {
+protocol TabeleViewMemberDelegate: class {
+    func updateArrayMembers(member: Member)
+}
+
+class mainTableViewController: UITableViewController, TabeleViewMemberDelegate {
     
     var eventsArray = [Event]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Событие"
+        //print(eventsArray)
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         
     }
@@ -32,6 +37,28 @@ class mainTableViewController: UITableViewController {
             eventsArray.append(sourceEventVC.event)
             self.tableView.insertRows(at: [newIndexPath], with: .fade)
         }
+        print(eventsArray)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard segue.identifier == "tapMainCellSegue" else { return }
+        let indexPath = tableView.indexPathForSelectedRow!
+        let arrayMembers = eventsArray[indexPath.row].members
+        
+        let naviVC = segue.destination as! UINavigationController
+        let membersTVC = naviVC.topViewController as! membersTableViewController
+        membersTVC.delegate = self
+        membersTVC.membersArray = arrayMembers
+
+    }
+    
+    func updateArrayMembers(member: Member) {
+        let indexPath = tableView.indexPathForSelectedRow!
+        eventsArray[indexPath.row].members.append(member)
+        print("updateArrayMembers")
+        
         
     }
     
@@ -87,7 +114,5 @@ class mainTableViewController: UITableViewController {
         
         return [deleteAction, shareAction]
     }
-    
-    
-    
+  
 }

@@ -19,24 +19,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="60" id="Vvc-OD-UOC" customClass="EventTableViewCell" customModule="sharePayments" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="60" id="Vvc-OD-UOC" customClass="EventTableViewCell" customModule="sharePayments" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vvc-OD-UOC" id="qAY-Sh-L1f">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleAspectFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZuH-qZ-adR">
-                                            <rect key="frame" x="32" y="19" width="256" height="22"/>
+                                            <rect key="frame" x="32" y="19" width="230" height="22"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaJ-vS-1Fj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="204" height="22"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="178" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9B-Jn-R6X">
-                                                    <rect key="frame" x="214" y="0.0" width="42" height="22"/>
+                                                    <rect key="frame" x="188" y="0.0" width="42" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                                 <connections>
                                     <outlet property="dateEventLabel" destination="J9B-Jn-R6X" id="jDe-gI-eK8"/>
                                     <outlet property="nameEventLabel" destination="RaJ-vS-1Fj" id="S58-fq-bbp"/>
-                                    <segue destination="pSG-it-Qbv" kind="show" identifier="tapMAinCellSegue" id="o8G-xV-GDw"/>
+                                    <segue destination="pSG-it-Qbv" kind="show" identifier="tapMainCellSegue" id="o8G-xV-GDw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -193,11 +193,14 @@
                                 <segue destination="wYp-1j-gEi" kind="unwind" unwindAction="unwindSegueWithSegue:" id="qVk-LY-DNc"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3WV-Uh-bok">
-                            <connections>
-                                <segue destination="50y-EI-f1I" kind="presentation" id="MoK-dE-8xs"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="3WV-Uh-bok">
+                                <connections>
+                                    <segue destination="50y-EI-f1I" kind="presentation" id="MoK-dE-8xs"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="compose" id="0sa-xV-qAx"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bji-hx-c98" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -244,7 +247,11 @@
                         <viewLayoutGuide key="safeArea" id="fTm-xf-FGV"/>
                     </view>
                     <navigationItem key="navigationItem" id="1nj-RS-Rye">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Imm-t1-5Lg"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Imm-t1-5Lg">
+                            <connections>
+                                <segue destination="Ena-6t-SEd" kind="unwind" unwindAction="unwindSegueMemberWithSegue:" id="6Lb-Gd-rMp"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="HvD-u3-eTT">
                             <connections>
                                 <segue destination="Ena-6t-SEd" kind="unwind" identifier="unwindDone" unwindAction="unwindSegueMemberWithSegue:" id="g8O-jK-Rk2"/>

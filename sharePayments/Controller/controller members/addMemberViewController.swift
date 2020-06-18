@@ -28,6 +28,7 @@ class addMemberViewController: UIViewController {
     }
     
     @IBAction func nameMemberAction(_ sender: UITextField) {
+        
         if (sender.text?.isEmpty)! {
             doneButton.isEnabled = false
         } else {
