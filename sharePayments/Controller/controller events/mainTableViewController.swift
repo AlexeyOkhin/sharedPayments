@@ -10,6 +10,8 @@ import UIKit
 
 protocol TabeleViewMemberDelegate: class {
     func updateArrayMembers(member: Member)
+    func deleteArrayMembers(memberInt: Int)
+    
 }
 
 class mainTableViewController: UITableViewController, TabeleViewMemberDelegate {
@@ -57,6 +59,14 @@ class mainTableViewController: UITableViewController, TabeleViewMemberDelegate {
     func updateArrayMembers(member: Member) {
         let indexPath = tableView.indexPathForSelectedRow!
         eventsArray[indexPath.row].members.append(member)
+        print("updateArrayMembers")
+        
+        
+    }
+    
+    func deleteArrayMembers(memberInt: Int) {
+        let indexPath = tableView.indexPathForSelectedRow!
+        eventsArray[indexPath.row].members.remove(at: memberInt)
         print("updateArrayMembers")
         
         
