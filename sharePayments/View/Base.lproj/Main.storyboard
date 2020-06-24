@@ -143,6 +143,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y0x-L0-dBb">
+                            <rect key="frame" x="0.0" y="78" width="320" height="183"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberCell" rowHeight="50" id="goz-Ir-P2t" customClass="MembersTableViewCell" customModule="sharePayments" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="50"/>
@@ -182,6 +189,7 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="ovu-4q-jlc" id="fRx-6A-oo7"/>
                             <outlet property="delegate" destination="ovu-4q-jlc" id="w0d-ZE-4HT"/>
@@ -199,9 +207,16 @@
                                     <segue destination="50y-EI-f1I" kind="presentation" id="MoK-dE-8xs"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="compose" id="0sa-xV-qAx"/>
+                            <barButtonItem systemItem="compose" id="0sa-xV-qAx">
+                                <connections>
+                                    <action selector="itogButtonAction:" destination="ovu-4q-jlc" id="dw4-gh-u3W"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultLabel" destination="Y0x-L0-dBb" id="eCs-Cl-C3V"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bji-hx-c98" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="wYp-1j-gEi" userLabel="Exit" sceneMemberID="exit"/>

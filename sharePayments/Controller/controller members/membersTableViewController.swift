@@ -10,6 +10,7 @@ import UIKit
 
 class membersTableViewController: UITableViewController {
     
+    @IBOutlet weak var resultLabel: UILabel!
     var membersArray = [Member]()
     
     weak var delegate: TabeleViewMemberDelegate?
@@ -72,7 +73,79 @@ class membersTableViewController: UITableViewController {
         return [deleteAction]
     }
     
+    // MARK: Action
     
-    
-    
+    @IBAction func itogButtonAction(_ sender: UIBarButtonItem) {
+        
+        let totalPay = membersArray.reduce(0, { $0 + $1.payment })
+        print (totalPay)
+        
+        let eqPay = (totalPay / membersArray.count)
+        print(eqPay)
+        
+        let tmpArray = membersArray.map{ member in
+            (member.name, eqPay - member.payment)
+        }
+        print (tmpArray)
+        
+        var debtorsArray = tmpArray.filter{name,pay in pay > 0}
+        print (debtorsArray)
+        
+        var lendersArray = tmpArray.filter{name,pay in pay < 0}
+        print (lendersArray)
+        
+        var lender = lendersArray[0]
+        var debtor = debtorsArray[0]
+        var values = [String]()
+        var delta = 0
+        
+        while lendersArray.count > 0 && debtorsArray.count > 0 {
+            if lender.1 == 0 {
+                lender = lendersArray[0]
+            }
+            if debtor.1 == 0 {
+                debtor = debtorsArray[0]
+            }
+            
+            delta = debtor.1 + lender.1
+            
+            if (delta < 0) {
+                values.append("Должник:\(debtor.0) отдает :\(lender.0) сумму :\(debtor.1)")
+                lender.1 += debtor.1
+                debtor.1 = 0
+            } else {
+                values.append("Должник:\(debtor.0) отдает :\(lender.0) сумму :\(-lender.1)")
+                debtor.1 += lender.1
+                lender.1 = 0
+            }
+            
+            if (debtor.1 == 0) {
+                debtorsArray.remove(at: 0)
+                //debtor =
+            }
+            if (lender.1 == 0) {
+                lendersArray.remove(at: 0)
+                //lender = nil
+            }
+            
+            delta = 0
+        }
+        
+        resultLabel.text = ("""
+            Общая сумма: \(totalPay)
+            средний платеж = \(eqPay)
+            расплата \(values)
+            """)
+          print(values)
+          print(totalPay)
+          print(eqPay)
+        
+    }
 }
+ 
+        
+
+ 
+    
+    
+
