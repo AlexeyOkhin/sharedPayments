@@ -8,7 +8,7 @@
 
 import UIKit
 
-class addEventViewController: UIViewController {
+class AddEventViewController: UIViewController {
     
     var event = Event(name: "", date: "", members: [])
     var indexPathRow: IndexPath?

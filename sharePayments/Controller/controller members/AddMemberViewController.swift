@@ -8,7 +8,7 @@
 
 import UIKit
 
-class addMemberViewController: UIViewController {
+class AddMemberViewController: UIViewController {
     
     @IBOutlet weak var nameMemberTextField: UITextField!
     @IBOutlet weak var payMemberTextField: UITextField!

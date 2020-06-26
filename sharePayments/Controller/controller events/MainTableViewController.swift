@@ -14,7 +14,7 @@ protocol TabeleViewMemberDelegate: class {
     
 }
 
-class mainTableViewController: UITableViewController, TabeleViewMemberDelegate {
+class MainTableViewController: UITableViewController, TabeleViewMemberDelegate {
     
     var eventsArray = [Event]()
     
@@ -29,7 +29,7 @@ class mainTableViewController: UITableViewController, TabeleViewMemberDelegate {
     @IBAction func unwindSegue(segue: UIStoryboardSegue){
         guard segue.identifier == "unwindSave" else { return }
         
-        let sourceEventVC = segue.source as! addEventViewController
+        let sourceEventVC = segue.source as! AddEventViewController
         
         if sourceEventVC.title == "Редактировать событие" {
             eventsArray[(sourceEventVC.indexPathRow?.row)!] = sourceEventVC.event
@@ -50,7 +50,7 @@ class mainTableViewController: UITableViewController, TabeleViewMemberDelegate {
         let arrayMembers = eventsArray[indexPath.row].members
         
         let naviVC = segue.destination as! UINavigationController
-        let membersTVC = naviVC.topViewController as! membersTableViewController
+        let membersTVC = naviVC.topViewController as! MembersTableViewController
         membersTVC.delegate = self
         membersTVC.membersArray = arrayMembers
 
@@ -101,7 +101,7 @@ class mainTableViewController: UITableViewController, TabeleViewMemberDelegate {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .insert {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            guard let secondViewController = storyboard.instantiateViewController(withIdentifier: "addEventViewController") as? addEventViewController else { return }
+            guard let secondViewController = storyboard.instantiateViewController(withIdentifier: "addEventViewController") as? AddEventViewController else { return }
             secondViewController.event = self.eventsArray[indexPath.row]
             secondViewController.title = "Редактировать событие"
             secondViewController.indexPathRow = indexPath

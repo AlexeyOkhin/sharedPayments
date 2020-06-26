@@ -8,7 +8,7 @@
 
 import UIKit
 
-class membersTableViewController: UITableViewController {
+class MembersTableViewController: UITableViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     var membersArray = [Member]()
@@ -27,7 +27,7 @@ class membersTableViewController: UITableViewController {
         
         
         
-        let sourceMemberVC = segue.source as! addMemberViewController
+        let sourceMemberVC = segue.source as! AddMemberViewController
         
         
         let newIndexPath = IndexPath(row: membersArray.count, section: 0)

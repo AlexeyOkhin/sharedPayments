@@ -13,7 +13,7 @@
         <!--Table View Controller-->
         <scene sceneID="Pju-lv-blq">
             <objects>
-                <tableViewController id="hil-R6-eAA" userLabel="Table View Controller" customClass="mainTableViewController" customModule="sharePayments" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hil-R6-eAA" userLabel="Table View Controller" customClass="MainTableViewController" customModule="sharePayments" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8bx-bm-5gw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,7 @@
         <!--Добавить событие-->
         <scene sceneID="Kdx-y3-RGe">
             <objects>
-                <viewController storyboardIdentifier="addEventViewController" id="cKN-dP-Qbr" customClass="addEventViewController" customModule="sharePayments" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addEventViewController" id="cKN-dP-Qbr" customClass="AddEventViewController" customModule="sharePayments" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ob4-0W-20w">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +138,7 @@
         <!--Участники-->
         <scene sceneID="qvM-c5-AMH">
             <objects>
-                <tableViewController id="ovu-4q-jlc" customClass="membersTableViewController" customModule="sharePayments" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ovu-4q-jlc" customClass="MembersTableViewController" customModule="sharePayments" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gbq-au-jre">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,7 +226,7 @@
         <!--Add Member View Controller-->
         <scene sceneID="WDk-wb-t1k">
             <objects>
-                <viewController id="Vf8-p5-nr1" customClass="addMemberViewController" customModule="sharePayments" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vf8-p5-nr1" customClass="AddMemberViewController" customModule="sharePayments" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QeH-dr-nYU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
