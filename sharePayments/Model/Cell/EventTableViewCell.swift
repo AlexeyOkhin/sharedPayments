@@ -27,7 +27,7 @@ class EventTableViewCell: UITableViewCell {
     
     func set(object: Event) {
         self.nameEventLabel.text = object.name
-        self.dateEventLabel.text = object.date
+       
     }
 
 }

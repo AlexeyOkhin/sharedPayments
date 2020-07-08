@@ -26,6 +26,27 @@ class MainTableViewController: UITableViewController, TabeleViewMemberDelegate {
         
     }
     
+    @IBAction func newEventAction(_ sender: UIBarButtonItem) {
+        
+        let alertController = UIAlertController(title: "Событие", message: "", preferredStyle: .alert)
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Событие"
+            
+        }
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: { alert -> Void in
+            let firstTextField = alertController.textFields![0] as UITextField
+            let newEvent = Event(name: firstTextField.text!, members: [])
+            self.eventsArray.append(newEvent)
+            self.tableView.reloadData()
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: { (action : UIAlertAction!) -> Void in })
+               
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     @IBAction func unwindSegue(segue: UIStoryboardSegue){
         guard segue.identifier == "unwindSave" else { return }
         

@@ -10,7 +10,7 @@ import UIKit
 
 class AddEventViewController: UIViewController {
     
-    var event = Event(name: "", date: "", members: [])
+    var event = Event(name: "", members: [])
     var indexPathRow: IndexPath?
     
     @IBOutlet weak var nameEventTextField: UITextField!
@@ -23,7 +23,6 @@ class AddEventViewController: UIViewController {
         super.viewDidLoad()
         //self.title = "Добавить событие"
         nameEventTextField.text = event.name
-        dateEventTextField.text = event.date
         saveButton.isEnabled = false
         dateEventTextField.inputView = datePicker
         datePicker.datePickerMode = .date
@@ -65,9 +64,7 @@ class AddEventViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "unwindSave" else { return }
         let event = nameEventTextField.text ?? ""
-        let date = dateEventTextField.text ?? ""
-        
-        self.event = Event(name: event, date: date, members: [])
+        self.event = Event(name: event, members: [])
     }
 
     

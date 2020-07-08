@@ -17,7 +17,7 @@ struct Member {
 
 struct Event {
     var name: String
-    var date: String
+    //var date: String
     var members: [Member]
 
 }
